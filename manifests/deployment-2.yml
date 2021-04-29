@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "bishaljavaspringtemp-f772"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "bishaljavaspringtemp-f772"
+  template:
+    metadata:
+      labels:
+        app: "bishaljavaspringtemp-f772"
+    spec:
+      containers:
+        - name: "bishaljavaspringtemp-f772"
+          image: "aaaatiwarishubregistry.azurecr.io/bishaljavaspringtemp"
+          ports:
+          - containerPort: 80
